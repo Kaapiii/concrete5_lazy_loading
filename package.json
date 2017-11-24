@@ -1,0 +1,10 @@
+{
+    "name": "Concrete5LazyLoading",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "markus.liechti",
+    "contributors": [],
+    "dependencies": {
+        "lazyloadxt":">=1.1.0",
+    }
+}

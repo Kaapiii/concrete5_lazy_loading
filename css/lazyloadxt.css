@@ -1,0 +1,20 @@
+/* 
+    Author     : markus.liechti
+*/
+
+picture {
+  display: block;
+}
+picture > br {
+  display: none;
+}
+
+img.lazy {
+  display: none;
+  opacity: 0;
+}
+
+/*img:not(.main-header) {
+  max-width: 100%;
+  height: auto;
+}*/
