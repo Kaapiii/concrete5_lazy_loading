@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\LazyLoading\Src\Html;
+namespace Concrete\Package\Concrete5LazyLoading\Src\Html;
 
 use \Concrete\Core\Page\Theme\Theme as PageTheme;
 use \Concrete\Package\LazyLoading\Src\Html\Object\Picture;

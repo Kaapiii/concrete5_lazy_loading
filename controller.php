@@ -40,7 +40,7 @@ class Controller extends \Concrete\Core\Package\Package{
 
         // Override the default image binding of 'html/image' in the
         // Concrete\Core\Html\HtmlServiceProvider
-        \Concrete\Core\Support\Facade\Application::bind('html/image', '\Concrete\Package\LazyLoading\Src\Html\Image');
+        \Concrete\Core\Support\Facade\Application::bind('html/image', '\Concrete\Package\Concrete5LazyLoading\Src\Html\Image');
 
         $al = AssetList::getInstance();
         $this->registerAssets($al);
