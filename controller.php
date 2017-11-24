@@ -68,7 +68,7 @@ class Controller extends \Concrete\Core\Package\Package{
         $al->register(
             'javascript', 'lazyloadxt', 'node_modules/lazyloadxt/dist/jquery.lazyloadxt.min.js',
             array('version' => '1.1.0', 'position' => Asset::ASSET_POSITION_FOOTER,
-            'minify' => false, 'combine' => true), 'lazy_loading'
+            'minify' => false, 'combine' => true), $this->pkgHandle
         );
         $al->register(
             'javascript', 'lazyloadxt-bg', 'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.min.js',
