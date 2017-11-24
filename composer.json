@@ -1,0 +1,18 @@
+{
+    "name": "kaapiii/concrete5_lazy_loading",
+    "description": "Adds lazy loading support for images for background images to concrete5.",
+    "license": "MIT",
+    "type": "concrete5-package",
+    "authors": [
+        {
+            "name": "Markus Liechti",
+            "email": "markus@liechti.io"
+        }
+    ],
+    "config": {
+        "vendor-dir":"./vendor"
+    },
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
