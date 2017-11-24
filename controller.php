@@ -24,6 +24,10 @@ class Controller extends \Concrete\Core\Package\Package{
      */
     protected $app;
 
+    protected $pkgAutoloaderRegistries = array(
+        'src/Kaapiii/Concrete/Core' => '\Kaapiii\Concrete\Core'
+    );
+
     public function getPackageDescription() {
         return t("Adds lazy loading support for images for background images");
     }
@@ -40,7 +44,7 @@ class Controller extends \Concrete\Core\Package\Package{
 
         // Override the default image binding of 'html/image' in the
         // Concrete\Core\Html\HtmlServiceProvider
-        \Concrete\Core\Support\Facade\Application::bind('html/image', '\Concrete\Package\Concrete5LazyLoading\Src\Html\Image');
+        \Concrete\Core\Support\Facade\Application::bind('html/image', '\Kaapiii\Concrete\Core\Html\Image');
 
         $al = AssetList::getInstance();
         $this->registerAssets($al);

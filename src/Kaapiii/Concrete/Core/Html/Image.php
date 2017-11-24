@@ -1,8 +1,9 @@
 <?php
-namespace Concrete\Package\Concrete5LazyLoading\Src\Html;
+namespace Kaapiii\Concrete\Core\Html;
 
-use \Concrete\Core\Page\Theme\Theme as PageTheme;
-use \Concrete\Package\LazyLoading\Src\Html\Object\Picture;
+use Concrete\Core\Page\Theme\Theme as PageTheme;
+use Kaapiii\Concrete\Core\Html\Object\Picture;
+use Concrete\Core\Entity\File\File ;
 
 class Image
 {

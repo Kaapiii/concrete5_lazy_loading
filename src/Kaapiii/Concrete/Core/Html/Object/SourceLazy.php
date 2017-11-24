@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\Concrete5LazyLoading\Src\Html\Object;
+namespace Kaapiii\Concrete\Core\Html\Object;
 
 use HtmlObject\Element;
 
