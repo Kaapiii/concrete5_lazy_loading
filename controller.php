@@ -7,9 +7,10 @@ use \Concrete\Core\Http\ResponseAssetGroup;
 
 defined('C5_EXECUTE') or die(_("Access Denied."));
 /**
- * Package Lazyload images
+ * Package Controller
  *
- * @author markus.liechti
+ * @author Markus Liechti <markus@liechti.io>
+ * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class Controller extends \Concrete\Core\Package\Package{
     //put your code here
@@ -44,7 +45,13 @@ class Controller extends \Concrete\Core\Package\Package{
         $al = AssetList::getInstance();
         $this->registerAssets($al);
         $this->groupAssets($al);
-        $this->loadAssets($al);
+        
+        // Only load the assets before a page is rendered
+        // Fixes parsing error on the page tree (dynatree.js) on dashboard/sitemap/full
+        $pkg = $this;
+        \Events::addListener('on_before_render', function($event) use ($pkg, $al) {
+            $pkg->loadAssets($al);
+        });
     }
 
     /**
