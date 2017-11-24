@@ -16,7 +16,7 @@ class Controller extends \Concrete\Core\Package\Package{
     //put your code here
 
     protected $pkgHandle = 'concrete5_lazy_loading';
-    protected $appVersionRequired = '5.7.5';
+    protected $appVersionRequired = '8.0.0';
     protected $pkgVersion = '1.0.0';
     
     /**
