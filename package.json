@@ -5,6 +5,6 @@
     "author": "markus.liechti",
     "contributors": [],
     "dependencies": {
-        "lazyloadxt":">=1.1.0",
+        "lazyloadxt":">=1.1.0"
     }
 }
