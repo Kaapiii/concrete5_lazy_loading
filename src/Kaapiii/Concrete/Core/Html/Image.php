@@ -2,7 +2,7 @@
 namespace Kaapiii\Concrete\Core\Html;
 
 use Concrete\Core\Page\Theme\Theme as PageTheme;
-use Kaapiii\Concrete\Core\Html\Object\Picture;
+use Kaapiii\Concrete\Core\Html\Object\Picture as LazyPicture;
 use Concrete\Core\Entity\File\File ;
 
 class Image
@@ -11,6 +11,8 @@ class Image
     protected $tag;
 
     protected $theme;
+
+    protected $file;
 
     protected function loadPictureSettingsFromTheme()
     {
@@ -30,6 +32,9 @@ class Image
      */
     public function __construct(File $f = null, $usePictureTag = null)
     {
+
+        $this->file = $f;
+
         if (!is_object($f)) {
             return false;
         }
@@ -60,7 +65,7 @@ class Image
                     }
                 }
             }
-            $this->tag = \Concrete\Core\Html\Object\Picture::create($sources, $fallbackSrc);
+            $this->tag = LazyPicture::create($sources, $fallbackSrc);
         } else {
             // Return a simple image tag.
             $path = $f->getRelativePath();
