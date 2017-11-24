@@ -76,16 +76,6 @@ class Controller extends \Concrete\Core\Package\Package{
             'minify' => false, 'combine' => true), $this->pkgHandle
         );
         $al->register(
-            'javascript', 'lazyloadxt-srcset', 'node_modules/lazyloadxt/dist/jquery.lazyloadxt.srcset.min.js',
-            array('version' => '1.1.0', 'position' => Asset::ASSET_POSITION_FOOTER,
-            'minify' => false, 'combine' => true), $this->pkgHandle
-        );
-        $al->register(
-            'javascript', 'lazyloadxt-picture', 'node_modules/lazyloadxt/dist/jquery.lazyloadxt.picture.min.js',
-            array('version' => '1.1.0', 'position' => Asset::ASSET_POSITION_FOOTER,
-            'minify' => false, 'combine' => true), $this->pkgHandle
-        );
-        $al->register(
             'javascript', 'lazyloadxt-main', 'js/lazyloadxt.js',
             array('version' => '1.0.0', 'position' => Asset::ASSET_POSITION_FOOTER,
             'minify' => true, 'combine' => true), $this->pkgHandle
@@ -114,10 +104,8 @@ class Controller extends \Concrete\Core\Package\Package{
            array('css', 'lazyloadxt-fadein'),
            array('css', 'lazyloadxt-css'),
            array('javascript', 'lazyloadxt'),
-           array('javascript', 'lazyloadxt-bg'),
-           array('javascript', 'lazyloadxt-srcset'),
-           array('javascript', 'lazyloadxt-picture'),
            array('javascript', 'lazyloadxt-main'),
+           array('javascript', 'lazyloadxt-bg'),
        ));
     }
 
