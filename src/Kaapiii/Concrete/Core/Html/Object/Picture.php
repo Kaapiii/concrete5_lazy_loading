@@ -64,7 +64,7 @@ class Picture extends Element
             $path = $source['src'];
             $width = $source['width'];
             $source = SourceLazy::create();
-            $source->srcset('');
+            //$source->srcset('');
             $source->setAttribute('data-src', $path);
 
             if ($width != 0) {
